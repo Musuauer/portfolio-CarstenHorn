@@ -1,0 +1,46 @@
+{
+  "name": "Carsten Horn",
+  "description": "Carsten Horn portfolio",
+  "version": "1.0.0",
+  "author": "Guillermo Gudino <info@guillermogudino.com>",
+  "dependencies": {
+    "gatsby": "^2.0.19",
+    "gatsby-image": "^2.0.15",
+    "gatsby-plugin-manifest": "^2.0.5",
+    "gatsby-plugin-netlify-cms": "^3.0.5",
+    "gatsby-plugin-offline": "^2.0.5",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.0.11",
+    "gatsby-source-filesystem": "^2.0.4",
+    "gatsby-transformer-json": "^2.1.5",
+    "gatsby-transformer-remark": "^2.1.9",
+    "gatsby-transformer-sharp": "^2.1.4",
+    "netlify-cms": "^2.1.3",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-hamburger-menu": "^1.1.1",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.1.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.0.3",
+    "tunnel-agent": "^0.6.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.14.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Musuauer/portfolio-CarstenHorn"
+  }
+}
