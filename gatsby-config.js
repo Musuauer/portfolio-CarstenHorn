@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Chryssa Tsampazi'
+    title: 'Carsten Horn'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Chryssa Tsampazi',
-        short_name: 'Tsampazi',
+        name: 'Carsten Horn',
+        short_name: 'Horn',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',

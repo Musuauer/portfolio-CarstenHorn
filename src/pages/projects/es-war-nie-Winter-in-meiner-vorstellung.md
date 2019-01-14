@@ -16,6 +16,3 @@ description: "Text fehlt noch."
 ![Es war nie Winter in meiner Vorstellung](/img/es_war_nie_winter_06.jpg)
 ![Es war nie Winter in meiner Vorstellung](/img/es_war_nie_winter_07.jpg)
 ![Es war nie Winter in meiner Vorstellung](/img/es_war_nie_winter_08.jpg)
-
-
-

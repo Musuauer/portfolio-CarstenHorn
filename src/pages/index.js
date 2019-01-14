@@ -1,7 +1,8 @@
 import React from 'react'
 import { coverImages } from '../constants/coverImages'
 import styled from 'styled-components'
-import { navigate } from 'gatsby'
+import Layout from '../components/Layout'
+// import { navigate } from 'gatsby'
 import '../pages/style.css'
 
 const CoverImage = styled.div`
@@ -48,13 +49,14 @@ export default class IndexPage extends React.Component {
 
  render () {
    return (
-     <CoverImage
-       className='cover-image'
-       randomImage={this.state.randomImage}
-       onClick={() => navigate('/projectslist')}
-       role='link'
-       tabIndex='0'
-     />
+     <Layout>
+       <CoverImage
+         className='cover-image'
+         randomImage={this.state.randomImage}
+         tabIndex='0'
+         //  onClick={() => navigate('/projectslist')}
+       />
+     </Layout>
    )
  }
 }

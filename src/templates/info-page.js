@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import ConnectedLayout from '../components/layout'
+import Layout from '../components/Layout'
 
 export const InfoTemplate = ({
   content
@@ -14,23 +14,22 @@ const Info = ({ data, props }) => {
   const { markdownRemark: post } = data
 
   return (
-    <ConnectedLayout>
+    <Layout>
       <InfoTemplate
         content={post.html}
       />
-    </ConnectedLayout>
+    </Layout>
   )
 }
 
 export default Info
 
 export const infoPageQuery = graphql`
-  query InfoQuery($path: String!){
+  query ($path: String!){
     markdownRemark(frontmatter: { path: { eq: $path }}) {
       html
       frontmatter{
         title
-        language
       }
     }
   }

@@ -4,7 +4,6 @@ path: "woanders/portraits"
 order: "02"
 category: "woanders"
 title: "2 Portraits"
-
 description: "Text fehlt noch."
 
 ---
@@ -16,5 +15,3 @@ description: "Text fehlt noch."
 ![Portraits](/img/portraits_06.jpg)
 ![Portraits](/img/portraits_07.jpg)
 ![Portraits](/img/portraits_08.jpg)
-
-

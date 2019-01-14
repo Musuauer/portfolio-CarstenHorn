@@ -47,11 +47,11 @@ export default class IndexPage extends React.Component {
                 <div className='menu-item'>
                   <h2>
                     <Link
-                      to='/projectslist'
+                      to='/woanders'
                       activeClassName='current'
-                      onClick={this.handleClick}
+                      // onClick={this.handleClick}
                     >
-                      {!this.props.german ? 'Projects' : 'Projekte' }
+                      Woanders
                     </Link>
                   </h2>
                 </div>
@@ -59,37 +59,26 @@ export default class IndexPage extends React.Component {
                 <div className='menu-item'>
                   <h2>
                     <Link
-                      to={!this.props.german ? '/info' : '/de/info'}
+                      to='/archiv'
+                      activeClassName='current'
+                    >
+                      Archiv
+                    </Link>
+                  </h2>
+                </div>
+
+                <div className='menu-item'>
+                  <h2>
+                    <Link
+                      to='/info'
                       activeClassName='current'
                     >
                       Info
                     </Link>
                   </h2>
                 </div>
-
-                <div className='menu-item'>
-                  <h2>
-                    <Link
-                      to={!this.props.german ? '/contact' : '/de/kontakt'}
-                      activeClassName='current'
-                    >
-                      {!this.props.german ? 'Contact' : 'Kontakt' }
-                    </Link>
-                  </h2>
-                </div>
                 <br />
                 <br />
-                <div className='de'
-                  onClick={this.props.toggleLanguage}>
-                  <div className='menu-item'
-                  >
-
-                    <h2 >
-                      {!this.props.german ? 'de' : 'en'}
-                    </h2>
-
-                  </div>
-                </div>
               </div>
             </div>
           )

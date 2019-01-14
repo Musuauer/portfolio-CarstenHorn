@@ -4,7 +4,6 @@ path: "archiv/berliner-stadtlandschaft"
 order: "01"
 category: "archiv"
 title: "Berliner Stadtlandschaft"
-
 description: "Text fehlt noch."
 
 ---
@@ -17,6 +16,3 @@ description: "Text fehlt noch."
 ![Berliner Stadtlandschaft](/img/berliner_stadtlandschaft_07.jpg)
 ![Berliner Stadtlandschaft](/img/berliner_stadtlandschaft_08.jpg)
 ![Berliner Stadtlandschaft](/img/berliner_stadtlandschaft_09.jpg)
-
-
-
