@@ -1,7 +1,7 @@
 import React from 'react'
 import { coverImages } from '../constants/coverImages'
 import styled from 'styled-components'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 // import { navigate } from 'gatsby'
 import '../pages/style.css'
 
