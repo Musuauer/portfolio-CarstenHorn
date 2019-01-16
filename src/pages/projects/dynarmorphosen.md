@@ -1,6 +1,6 @@
 ---
 templateKey: "project"
-path: "archiv/dynarmorphosen"
+path: "/archiv/dynarmorphosen"
 order: "03"
 category: "archiv"
 title: "Dynarmorphosen"

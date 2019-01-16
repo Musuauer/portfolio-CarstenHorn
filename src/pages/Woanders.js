@@ -36,10 +36,10 @@ const Archiv = (props) => (
   <StaticQuery
     query={
       graphql`
-  query ArchivQuery {
+  query WoandersQuery {
     allMarkdownRemark(
       sort: { order: ASC, fields: [frontmatter___order] },
-      filter: { frontmatter: { templateKey: { eq: "project" }, category: { eq: "archiv" } }}
+      filter: { frontmatter: { templateKey: { eq: "project" }, category: { eq: "woanders" } }}
     ) {
       edges {
         node {

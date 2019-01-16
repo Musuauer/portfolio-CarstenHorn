@@ -1,6 +1,6 @@
 ---
 templateKey: "project"
-path: "archiv/berliner-stadtlandschaft"
+path: "/archiv/berliner-stadtlandschaft"
 order: "01"
 category: "archiv"
 title: "Berliner Stadtlandschaft"

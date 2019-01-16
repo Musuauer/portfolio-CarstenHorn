@@ -1,6 +1,6 @@
 ---
 templateKey: "project"
-path: "archiv/tempelhofer-feld"
+path: "/archiv/tempelhofer-feld"
 order: "02"
 category: "archiv"
 title: "Tempelhofer Feld"

@@ -1,6 +1,6 @@
 ---
 templateKey: "project"
-path: "archiv/es-war-nie-Winter-in-meiner-vorstellung"
+path: "/archiv/es-war-nie-Winter-in-meiner-vorstellung"
 order: "04"
 category: "archiv"
 title: "Es war nie Winter in meiner Vorstellung"

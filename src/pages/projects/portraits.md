@@ -1,6 +1,6 @@
 ---
 templateKey: "project"
-path: "woanders/portraits"
+path: "/woanders/portraits"
 order: "02"
 category: "woanders"
 title: "2 Portraits"

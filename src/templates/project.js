@@ -30,7 +30,7 @@ export const ProjectTemplate = ({
         </div> */}
 
       </div>
-
+      {console.log('images', images)}
       <div className='photos-container'
         dangerouslySetInnerHTML={{__html: images}} />
 

@@ -1,6 +1,6 @@
 ---
 templateKey: "project"
-path: "woanders/der-platz"
+path: "/woanders/der-platz"
 order: "03"
 category: "woanders"
 title: "3 Der Platz"
