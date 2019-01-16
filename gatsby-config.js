@@ -11,6 +11,13 @@ module.exports = {
         path: `${__dirname}/src/pages`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `homepage`,
+        path: `${__dirname}/src/img/homepage`
+      }
+    },
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

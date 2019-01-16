@@ -1,8 +1,9 @@
 import React from 'react'
+import Menubar from './Menubar'
 import { Link } from 'gatsby'
 import HamburgerMenu from 'react-hamburger-menu'
 
-export default class IndexPage extends React.Component {
+export default class Header extends React.Component {
   state = {
     open: false
   }
@@ -13,8 +14,10 @@ export default class IndexPage extends React.Component {
   }
 
   render () {
+    console.log('header mounted')
     return (
-      <div className='header'>
+      <header>
+
         <div className='name'>
           <h1>
             <Link
@@ -24,6 +27,9 @@ export default class IndexPage extends React.Component {
             </Link>
           </h1>
         </div>
+
+        <Menubar />
+
         <div className='mobile-nav'>
 
           <div className='menu-btn' id='menu-btn'>
@@ -86,7 +92,7 @@ export default class IndexPage extends React.Component {
 
         </div>
 
-      </div>
+      </header>
 
     )
   }

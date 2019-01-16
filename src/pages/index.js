@@ -1,29 +1,31 @@
 import React from 'react'
-import { coverImages } from '../constants/coverImages'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import Layout from '../components/layout'
-// import { navigate } from 'gatsby'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import '../pages/style.css'
 
-const CoverImage = styled.div`
-background: url(${props => props.randomImage}) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; overflow: hidden; z-index: 99999; height: 100vh;
-`
 export default class IndexPage extends React.Component {
   state= {
-    coverImages: [],
+    images: [],
     randomImage: ''
   }
 
   componentDidMount () {
+    console.log('did mount:', this.props.data.imagesHome.edges)
+    const images = this.props.data.imagesHome.edges.map(image =>
+      image.node.childImageSharp.fluid
+    )
+    console.log('images', images)
     this.setState(
-      { coverImages },
+      { images },
       () => this.shuffleNow()
     )
   }
 
   shuffleNow = () => {
-    const coverImagesCopy = this.state.coverImages.slice(0)
-    const shuffledImages = this.shuffle(coverImagesCopy)
+    const imagesCopy = this.state.images.slice(0)
+    const shuffledImages = this.shuffle(imagesCopy)
     this.setState({ randomImage: shuffledImages[0] })
   }
 
@@ -41,22 +43,41 @@ export default class IndexPage extends React.Component {
    return array
  }
 
- changeLanguage = () => {
-   this.setState({
-     german: !this.state.german
-   })
- }
-
  render () {
+   console.log('state', this.state)
+   if (!this.state.randomImage) {
+     return <div>
+       <p>
+          loading...
+       </p>
+     </div>
+   }
    return (
      <Layout>
-       <CoverImage
-         className='cover-image'
-         randomImage={this.state.randomImage}
-         tabIndex='0'
-         //  onClick={() => navigate('/projectslist')}
-       />
+       <div className='image-container'>
+         <Img
+           fluid={this.state.randomImage}
+           imgStyle={{objectFit: 'contain'}}
+           className='home-images'
+         />
+       </div>
      </Layout>
    )
  }
 }
+
+export const query = graphql`
+  query {
+      imagesHome: allFile(filter: { sourceInstanceName: { eq: "homepage" } }) {
+       edges{
+         node{
+           childImageSharp{
+             fluid(maxWidth: 1800){
+             ...GatsbyImageSharpFluid
+             }
+           }
+         }
+       }
+     }
+   }
+`

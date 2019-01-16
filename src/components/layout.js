@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Menubar from './Menubar'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from './Header'
 
@@ -22,7 +21,8 @@ class Layout extends Component {
     `}
         render={data => (
 
-          <div className='grid'>
+          <div className='App'>
+          
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
@@ -32,11 +32,15 @@ class Layout extends Component {
             >
               <html lang='de' />
             </Helmet>
+
             <Header
               siteTitle={data.site.siteMetadata.title}
             />
-            <Menubar />
-            {this.props.children}
+
+            <main>
+              {this.props.children}
+            </main>
+
           </div>
 
         )}

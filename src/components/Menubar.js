@@ -4,13 +4,12 @@ import { Link } from 'gatsby'
 class Menubar extends Component {
   render () {
     return (
-      <div className='menu menu-project'>
+      <div className='menu'>
         <div className='menu-item'>
           <h2>
             <Link
-              to='/woanders'
+              to='/Woanders'
               activeClassName='current'
-              // onClick={this.handleClick}
             >
                       Woanders
             </Link>
@@ -20,7 +19,7 @@ class Menubar extends Component {
         <div className='menu-item'>
           <h2>
             <Link
-              to='/archiv'
+              to='/Archiv'
               activeClassName='current'
             >
                       Archiv
@@ -31,10 +30,21 @@ class Menubar extends Component {
         <div className='menu-item'>
           <h2>
             <Link
-              to='/info'
+              to='/Info'
               activeClassName='current'
             >
                       Info
+            </Link>
+          </h2>
+        </div>
+
+        <div className='menu-item'>
+          <h2>
+            <Link
+              to='/Impressum'
+              activeClassName='current'
+            >
+                     Impressum
             </Link>
           </h2>
         </div>

@@ -38,7 +38,7 @@ const Archiv = (props) => (
       graphql`
   query allProjectsQuery {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___order] },
+      sort: { order: ASC, fields: [frontmatter___order] },
       filter: { frontmatter: { templateKey: { eq: "project" }, category: { eq: "archiv" } }}
     ) {
       edges {
