@@ -3,7 +3,7 @@ templateKey: "project"
 path: "/woanders/die-raeumung"
 order: "05"
 category: "woanders"
-title: "5 Die Räumung"
+title: "Die Räumung"
 description: "Text fehlt noch."
 
 ---

@@ -1,5 +1,4 @@
 import React from 'react'
-// import styled from 'styled-components'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
@@ -24,6 +23,7 @@ export default class IndexPage extends React.Component {
   }
 
   shuffleNow = () => {
+    console.log('shuffle')
     const imagesCopy = this.state.images.slice(0)
     const shuffledImages = this.shuffle(imagesCopy)
     this.setState({ randomImage: shuffledImages[0] })
@@ -54,13 +54,19 @@ export default class IndexPage extends React.Component {
    }
    return (
      <Layout>
-       <div className='image-container'>
+       <div
+         onClick={this.shuffleNow}
+         className='home-images'
+       >
          <Img
            fluid={this.state.randomImage}
            imgStyle={{objectFit: 'contain'}}
            className='home-images'
+           fadeIn={false}
+           backgroundColor={'white'}
          />
        </div>
+
      </Layout>
    )
  }

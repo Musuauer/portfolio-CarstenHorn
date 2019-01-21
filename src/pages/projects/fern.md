@@ -3,7 +3,7 @@ templateKey: "project"
 path: "/woanders/fern"
 order: "01"
 category: "woanders"
-title: "1 Fern"
+title: "Fern"
 description: "Text fehlt noch."
 
 ---

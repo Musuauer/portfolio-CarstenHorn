@@ -22,7 +22,7 @@ class Layout extends Component {
         render={data => (
 
           <div className='App'>
-          
+
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
@@ -38,7 +38,9 @@ class Layout extends Component {
             />
 
             <main>
-              {this.props.children}
+              <div className='content'>
+                {this.props.children}
+              </div>
             </main>
 
           </div>

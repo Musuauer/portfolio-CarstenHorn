@@ -3,7 +3,7 @@ templateKey: "project"
 path: "/woanders/innenleben"
 order: "04"
 category: "woanders"
-title: "4 Innenleben"
+title: "Innenleben"
 description: "Text fehlt noch."
 
 ---
