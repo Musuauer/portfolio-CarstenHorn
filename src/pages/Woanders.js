@@ -4,8 +4,9 @@ import Layout from '../components/layout'
 import styled from 'styled-components'
 
 const ProjectIndex = styled.div`
+  display: inline;
+  margin-right: 1rem;
 `
-display: inline; margin-right 1rem;`
 
 class Project extends Component {
   render () {

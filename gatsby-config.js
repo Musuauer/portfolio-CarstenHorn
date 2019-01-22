@@ -7,6 +7,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `images`,
+        path: `${__dirname}/static/img/`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `pages`,
         path: `${__dirname}/src/pages`
       }
@@ -15,12 +22,28 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `homepage`,
-        path: `${__dirname}/src/img/homepage`
+        path: `${__dirname}/static/img/homepage`
       }
     },
-    'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              linkImagesToOriginal: false,
+              maxWidth: 2880
+            }
+          }
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

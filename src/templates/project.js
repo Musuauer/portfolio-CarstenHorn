@@ -3,40 +3,62 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
-export const ProjectTemplate = ({
-  images,
-  title,
-  path,
-  description
-}) => {
-  return (
-    <React.Fragment>
-      <div className='project'>
-        <div className='project-header'>
-          <h3 className='project-name'>{title}</h3>
-        </div>
+export class ProjectTemplate extends React.Component {
+  componentDidMount () {
+    this.processImages()
+  }
+  processImages = () => {
+    const domImages = [...document.querySelectorAll('.gatsby-resp-image-wrapper')]
+    return domImages[0]
+  }
 
-        <div className='project-text'>
-          <p>
-            {description}
-          </p>
-        </div>
+  render () {
+    const {
+      images,
+      title,
+      description
+    } = this.props
 
-        {/* <div className='project-credit'>
+    return (
+      <React.Fragment>
+        <div className='project'>
+          <div className='project-header'>
+            <h3 className='project-name'>{title}</h3>
+          </div>
+
+          <div className='project-text'>
+            <p>
+              {description}
+            </p>
+          </div>
+
+          {/* <div className='project-credit'>
           {performers && <p>Performers: {performers}</p>}
           {documentation && <p>{documentation}</p>}
           {extra1 && <p>{extra1}</p>}
           {extra2 && <p>{extra2}</p>}
         </div> */}
 
-      </div>
-      {console.log('images', images)}
-      <div className='photos-container'
-        dangerouslySetInnerHTML={{__html: images}} />
-
-    </React.Fragment>
-  )
+        </div>
+        {console.log('images', images)}
+        <div className='photos-container'
+          dangerouslySetInnerHTML={{__html: images}} />
+        {this.processImages()}
+      </React.Fragment>
+    )
+  }
 }
+
+// export const ProjectTemplate = ({
+//   images,
+//   title,
+//   path,
+//   description
+// }) => {
+//   return (
+
+//   )
+// }
 
 ProjectTemplate.propTypes = {
   description: PropTypes.string,
@@ -45,6 +67,7 @@ ProjectTemplate.propTypes = {
 
 const Project = ({ data }) => {
   const { markdownRemark: post } = data
+  console.log('imagesProject', data)
   return (
     <Layout>
 
@@ -75,6 +98,17 @@ export const pageQuery = graphql`
         title
         path
         description
+      }
+    }
+    imagesProject: allFile(filter: { sourceInstanceName: { eq: "images" },  }) {
+      edges{
+        node{
+          childImageSharp{
+            fluid(maxWidth: 1800){
+            ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
