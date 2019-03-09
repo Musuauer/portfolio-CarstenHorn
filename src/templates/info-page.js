@@ -24,13 +24,13 @@ const Info = ({ data, props }) => {
 
 export default Info
 
-export const infoPageQuery = graphql`
-  query ($path: String!){
-    markdownRemark(frontmatter: { path: { eq: $path }}) {
-      html
-      frontmatter{
-        title
-      }
-    }
-  }
-`
+// export const infoPageQuery = graphql`
+//   query ($path: String!){
+//     markdownRemark(frontmatter: { path: { eq: $path }}) {
+//       html
+//       frontmatter{
+//         title
+//       }
+//     }
+//   }
+// `

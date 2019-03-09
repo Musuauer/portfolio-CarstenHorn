@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 
 class Project extends Component {
   render () {
-    const { post } = this.props
+    const { project } = this.props
 
     return (
       <div
@@ -12,20 +12,14 @@ class Project extends Component {
       >
         <Link
           className='link'
-          to={post.frontmatter.path}
+          to={project.path}
         >
-          {post.frontmatter.title}
+          {project.title}
         </Link>
 
-        {/* <Link
-          to={!german ? post.frontmatter.path : `/de${post.frontmatter.path}`}
-          className={this.state.linkClass}
-        >
-          <img
-            src={post.frontmatter.thumbnail}
-            className={this.state.imageClass} alt='thumbnail'
-          />
-        </Link> */}
+        <p className={'project-text'}>
+          {project.description.description}
+        </p>
 
       </div>
     )
@@ -36,33 +30,32 @@ const Archiv = (props) => (
   <StaticQuery
     query={
       graphql`
-  query ArchivQuery {
-    allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___order] },
-      filter: { frontmatter: { templateKey: { eq: "project" }, category: { eq: "archiv" } }}
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            path
-            templateKey
+      query archivQuery {
+        allContentfulProject(sort: {
+          fields: [order], order: ASC
+      }){
+          edges{
+            node{
+              title
+              order
+              path
+              description {
+                description
+              }
+            }
           }
         }
-      }
-    }
-  }
-`
+        }
+  `
     }
     render={data => (
       <Layout>
         <div className='project-list'>
-          {data.allMarkdownRemark.edges
-            .map(({ node: post }, i) => (
+          {data.allContentfulProject.edges
+            .map(({ node: project }, i) => (
               <Project
-                key={post.id}
-                post={post}
+                key={project.order}
+                project={project}
                 projectIndex={i}
               />
             ))}

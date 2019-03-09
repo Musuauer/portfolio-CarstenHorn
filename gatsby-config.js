@@ -13,20 +13,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/static/img/`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `homepage`,
         path: `${__dirname}/static/img/homepage`
       }
@@ -34,23 +20,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-relative-images`
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              linkImagesToOriginal: false,
-              maxWidth: 2880
-            }
-          }
-        ]
-      }
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -62,12 +31,6 @@ module.exports = {
         display: 'minimal-ui'
       }
     },
-    'gatsby-plugin-offline',
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
-      }
-    }
+    'gatsby-plugin-offline'
   ]
 }

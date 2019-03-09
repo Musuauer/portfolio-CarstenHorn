@@ -10,7 +10,7 @@ const ProjectIndex = styled.div`
 
 class Project extends Component {
   render () {
-    const { post, projectIndex } = this.props
+    const { chapter, projectIndex } = this.props
     return (
       <div
         className='list-item'
@@ -18,24 +18,14 @@ class Project extends Component {
 
         <Link
           className='link'
-          to={post.frontmatter.path}
+          to={chapter.path}
         >
           <ProjectIndex>
-            {projectIndex}
+            {projectIndex + 1}
           </ProjectIndex>
 
-          {post.frontmatter.title}
+          {chapter.title}
         </Link>
-
-        {/* <Link
-          to={!german ? post.frontmatter.path : `/de${post.frontmatter.path}`}
-          className={this.state.linkClass}
-        >
-          <img
-            src={post.frontmatter.thumbnail}
-            className={this.state.imageClass} alt='thumbnail'
-          />
-        </Link> */}
 
       </div>
     )
@@ -46,33 +36,30 @@ const Archiv = (props) => (
   <StaticQuery
     query={
       graphql`
-  query WoandersQuery {
-    allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___order] },
-      filter: { frontmatter: { templateKey: { eq: "project" }, category: { eq: "woanders" } }}
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            path
-            templateKey
+      query woandersQuery{
+        allContentfulBook(sort: {
+          fields: [order], order: ASC
+      }){
+          edges{
+            node{
+              id
+              title
+              order
+              path
+            }
           }
         }
-      }
-    }
-  }
-`
+        }
+  `
     }
     render={data => (
       <Layout>
         <div className='project-list'>
-          {data.allMarkdownRemark.edges
-            .map(({ node: post }, i) => (
+          {data.allContentfulBook.edges
+            .map(({ node: chapter }, i) => (
               <Project
-                key={post.id}
-                post={post}
+                key={chapter.id}
+                chapter={chapter}
                 projectIndex={i}
               />
             ))}

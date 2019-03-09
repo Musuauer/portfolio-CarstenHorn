@@ -88,13 +88,13 @@ a:hover{
 }
 .project-text{
     margin-top: 1rem;
+    margin-bottom: 4rem;
     line-height: 1.5;
 }
 /* --- HOME --- */
 .home-images{
     height: 100%;
     cursor: pointer;
-
 }
 
 

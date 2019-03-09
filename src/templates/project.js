@@ -1,22 +1,20 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
 export class ProjectTemplate extends React.Component {
-  componentDidMount () {
-    this.processImages()
-  }
-  processImages = () => {
-    const domImages = [...document.querySelectorAll('.gatsby-resp-image-wrapper')]
-    return domImages[0]
-  }
+  // componentDidMount () {
+  //   this.processImages()
+  // }
+  // processImages = () => {
+  //   const domImages = [...document.querySelectorAll('.gatsby-resp-image-wrapper')]
+  //   return domImages[0]
+  // }
 
   render () {
     const {
       images,
-      title,
-      description
+      title
     } = this.props
 
     return (
@@ -26,90 +24,66 @@ export class ProjectTemplate extends React.Component {
             <h3 className='project-name'>{title}</h3>
           </div>
 
-          <div className='project-text'>
-            <p>
-              {description}
-            </p>
-          </div>
-
-          {/* <div className='project-credit'>
-          {performers && <p>Performers: {performers}</p>}
-          {documentation && <p>{documentation}</p>}
-          {extra1 && <p>{extra1}</p>}
-          {extra2 && <p>{extra2}</p>}
-        </div> */}
-
         </div>
         {console.log('images', images)}
-        <div className='photos-container'
-          dangerouslySetInnerHTML={{__html: images}} />
-        {this.processImages()}
+        <div className='photos-container'>
+          {images.map(image =>
+            <div key={image.fluid.src}>
+              <img src={image.fluid.src} alt={title} />
+            </div>
+
+          )}
+        </div>
+
       </React.Fragment>
     )
   }
 }
 
-// export const ProjectTemplate = ({
-//   images,
-//   title,
-//   path,
-//   description
-// }) => {
-//   return (
-
-//   )
-// }
-
-ProjectTemplate.propTypes = {
-  description: PropTypes.string,
-  title: PropTypes.string
-}
-
 const Project = ({ data }) => {
-  const { markdownRemark: post } = data
-  console.log('imagesProject', data)
+  const post = data.allContentfulProject || data.allContentfulBook
+  console.log('ProjectData', post.edges[0].node)
   return (
     <Layout>
 
       <ProjectTemplate
-        images={post.html}
-        title={post.frontmatter.title}
-        path={post.frontmatter.path}
-        location={post.frontmatter.location}
-        description={post.frontmatter.description}
+        images={post.edges[0].node.images}
+        title={post.edges[0].node.title}
+        path={post.edges[0].node.path}
       />
     </Layout>
   )
 }
 
-Project.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object
-  })
-}
-
 export default Project
 
 export const pageQuery = graphql`
-  query ($path: String!){
-    markdownRemark(frontmatter: { path: { eq: $path }}) {
-      html
-      frontmatter {
+query projectQuery ($path: String!){
+  allContentfulProject(filter: { path: { eq: $path }}){
+    edges{
+      node{
         title
         path
-        description
-      }
-    }
-    imagesProject: allFile(filter: { sourceInstanceName: { eq: "images" },  }) {
-      edges{
-        node{
-          childImageSharp{
-            fluid(maxWidth: 1800){
-            ...GatsbyImageSharpFluid
-            }
+        images{
+          fluid{
+            src
           }
         }
       }
     }
   }
+  allContentfulBook(filter: { path: { eq: $path }}){
+    edges{
+      node{
+        title
+        path
+        images{
+          fluid{
+            src
+          }
+        }
+      }
+    }
+  }
+  } 
 `

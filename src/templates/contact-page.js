@@ -33,13 +33,13 @@ const Contact = ({ data, props }) => {
 
 export default Contact
 
-export const aboutPageQuery = graphql`
-query ($path: String!){
-  markdownRemark(frontmatter: { path: { eq: $path }}) {
-      html
-      frontmatter{
-        email
-      }
-    }
-  }
-`
+// export const aboutPageQuery = graphql`
+// query ($path: String!){
+//   markdownRemark(frontmatter: { path: { eq: $path }}) {
+//       html
+//       frontmatter{
+//         email
+//       }
+//     }
+//   }
+// `
