@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import Header from './Header'
+// import Header from './Header'
 
 import '../pages/style.css'
 
@@ -33,9 +33,9 @@ class Layout extends Component {
               <html lang='de' />
             </Helmet>
 
-            <Header
+            {/* <Header
               siteTitle={data.site.siteMetadata.title}
-            />
+            /> */}
 
             <main>
               <div className='content'>
