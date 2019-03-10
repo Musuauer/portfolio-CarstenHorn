@@ -16,6 +16,14 @@ body, html{
 body{
     margin: 0;
 }
+
+/* disable highlight on click  */
+html
+{
+  -webkit-tap-highlight-color: transparent;
+}
+
+
 .App{
     width: 90%;
     position: relative;

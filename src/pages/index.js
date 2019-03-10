@@ -11,9 +11,9 @@ export default class IndexPage extends React.Component {
   }
 
   componentDidMount () {
-    console.log('did mount:', this.props.data.imagesHome.edges)
-    const images = this.props.data.imagesHome.edges.map(image =>
-      image.node.childImageSharp.fluid
+    console.log('did mount:', this.props.data.allContentfulHomepageImages.edges[0].node.homeImages)
+    const images = this.props.data.allContentfulHomepageImages.edges[0].node.homeImages.map(image =>
+      image.fluid
     )
     console.log('images', images)
     this.setState(
@@ -74,16 +74,35 @@ export default class IndexPage extends React.Component {
 
 export const query = graphql`
   query {
-      imagesHome: allFile(filter: { sourceInstanceName: { eq: "homepage" } }) {
-       edges{
-         node{
-           childImageSharp{
-             fluid(maxWidth: 1800){
-             ...GatsbyImageSharpFluid
-             }
-           }
-         }
-       }
-     }
+    allContentfulHomepageImages{
+      edges{
+        node{
+          homeImages{
+            fluid{
+              src
+              aspectRatio
+              srcSet
+              sizes
+            }
+          }
+        }
+      }
+    }
    }
 `
+
+// export const query = graphql`
+//   query {
+//       imagesHome: allFile(filter: { sourceInstanceName: { eq: "homepage" } }) {
+//        edges{
+//          node{
+//            childImageSharp{
+//              fluid(maxWidth: 1800){
+//              ...GatsbyImageSharpFluid
+//              }
+//            }
+//          }
+//        }
+//      }
+//    }
+// `
