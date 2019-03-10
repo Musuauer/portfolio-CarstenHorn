@@ -3,7 +3,7 @@ import Menubar from './Menubar'
 import { Link } from 'gatsby'
 import HamburgerMenu from 'react-hamburger-menu'
 
-export default class Header extends React.Component {
+class Header extends React.Component {
   state = {
     open: false
   }
@@ -97,3 +97,5 @@ export default class Header extends React.Component {
     )
   }
 }
+
+export default Header
