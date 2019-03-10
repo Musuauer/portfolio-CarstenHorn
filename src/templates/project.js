@@ -1,16 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Img from 'gatsby-image'
 
 export class ProjectTemplate extends React.Component {
-  // componentDidMount () {
-  //   this.processImages()
-  // }
-  // processImages = () => {
-  //   const domImages = [...document.querySelectorAll('.gatsby-resp-image-wrapper')]
-  //   return domImages[0]
-  // }
-
   render () {
     const {
       images,
@@ -29,7 +22,13 @@ export class ProjectTemplate extends React.Component {
         <div className='photos-container'>
           {images.map(image =>
             <div key={image.fluid.src}>
-              <img src={image.fluid.src} alt={title} />
+              <Img
+                fluid={image.fluid}
+                imgStyle={{objectFit: 'contain'}}
+                className='project-images'
+                fadeIn
+                // backgroundColor={'white'}
+              />
             </div>
 
           )}
@@ -67,6 +66,9 @@ query projectQuery ($path: String!){
         images{
           fluid{
             src
+            aspectRatio
+            srcSet
+            sizes
           }
         }
       }
@@ -80,6 +82,9 @@ query projectQuery ($path: String!){
         images{
           fluid{
             src
+            aspectRatio
+            srcSet
+            sizes
           }
         }
       }

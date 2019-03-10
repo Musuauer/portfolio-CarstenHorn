@@ -99,6 +99,9 @@ a:hover{
     margin-bottom: 4rem;
     line-height: 1.5;
 }
+.project-images{
+    margin-top: 2rem;
+}
 /* --- HOME --- */
 .home-images{
     height: 100%;
