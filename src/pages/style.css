@@ -99,9 +99,28 @@ a:hover{
     margin-bottom: 4rem;
     line-height: 1.5;
 }
-.project-images{
-    margin-top: 2rem;
+
+.photos-container{
+    /* border: 1px solid red; */
 }
+
+.project-images{
+    max-height: 100%;
+    max-width: 100%;
+}
+.arrows{
+    font-size: 1.5rem;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
 /* --- HOME --- */
 .home-images{
     height: 100%;

@@ -4,35 +4,68 @@ import Layout from '../components/layout'
 import Img from 'gatsby-image'
 
 export class ProjectTemplate extends React.Component {
+  state = {
+    images: this.props.images,
+    currentIndex: 0
+  }
+
+  nextLeft = () => {
+    const currentIndex = this.state.currentIndex
+    let newIndex = 0
+
+    currentIndex === 0
+      ? (newIndex = this.props.images.length - 1)
+      : (newIndex = currentIndex - 1)
+      console.log('currentIndex:', currentIndex, 'newIndex:', newIndex)
+
+    this.setState({
+      currentIndex: newIndex
+    })
+  }
+
+  nextRight = () => {
+    const currentIndex = this.state.currentIndex
+    const newIndex = currentIndex + 1
+
+    this.setState({
+      currentIndex: (this.state.images.length === newIndex)
+        ? 0
+        : newIndex
+    })
+  }
+
   render () {
-    const {
-      images,
-      title
-    } = this.props
+    // const { title } = this.props
+    const { images, currentIndex } = this.state
 
     return (
       <React.Fragment>
-        <div className='project'>
+        {/* <div className='project'>
           <div className='project-header'>
             <h3 className='project-name'>{title}</h3>
           </div>
 
-        </div>
-        {console.log('images', images)}
-        <div className='photos-container'>
-          {images.map(image =>
-            <div key={image.fluid.src}>
-              <Img
-                fluid={image.fluid}
-                imgStyle={{objectFit: 'contain'}}
-                className='project-images'
-                fadeIn
-                // backgroundColor={'white'}
-              />
-            </div>
+        </div> */}
+        {console.log('images', images[currentIndex], 'index:', currentIndex)}
+        <Img
+          fluid={images[currentIndex].fluid}
+          imgStyle={{objectFit: 'contain'}}
+          className='project-images'
+          fadeIn={false}
+          // backgroundColor={'white'}
+        />
 
-          )}
+        <div className='arrows'>
+          <div
+            onClick={() => this.nextLeft()}
+          >{'<'}</div>
+
+          <div
+            onClick={() => this.nextRight()}
+          >{'>'}</div>
         </div>
+
+
 
       </React.Fragment>
     )
