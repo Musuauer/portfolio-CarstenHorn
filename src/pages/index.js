@@ -74,7 +74,7 @@ export default class IndexPage extends React.Component {
 
 export const query = graphql`
   query home{
-    allContentfulHomepageImages{
+    allContentfulHomeImages{
       edges{
         node{
           homeImages{
