@@ -11,11 +11,9 @@ export default class IndexPage extends React.Component {
   }
 
   componentDidMount () {
-    console.log('did mount:', this.props.data.allContentfulHomepageImages.edges[0].node.homeImages)
-    const images = this.props.data.allContentfulHomepageImages.edges[0].node.homeImages.map(image =>
+    const images = this.props.data.allContentfulHomeImages.edges[0].node.homeImages.map(image =>
       image.fluid
     )
-    console.log('images', images)
     this.setState(
       { images },
       () => this.shuffleNow()
@@ -23,7 +21,6 @@ export default class IndexPage extends React.Component {
   }
 
   shuffleNow = () => {
-    console.log('shuffle')
     const imagesCopy = this.state.images.slice(0)
     const shuffledImages = this.shuffle(imagesCopy)
     this.setState({ randomImage: shuffledImages[0] })
@@ -90,19 +87,3 @@ export const query = graphql`
     }
    }
 `
-
-// export const query = graphql`
-//   query {
-//       imagesHome: allFile(filter: { sourceInstanceName: { eq: "homepage" } }) {
-//        edges{
-//          node{
-//            childImageSharp{
-//              fluid(maxWidth: 1800){
-//              ...GatsbyImageSharpFluid
-//              }
-//            }
-//          }
-//        }
-//      }
-//    }
-// `
