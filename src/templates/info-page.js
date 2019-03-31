@@ -6,7 +6,14 @@ export const InfoTemplate = ({
   content
 }) => {
   return (
-    <div className='info' dangerouslySetInnerHTML={{__html: content}} />
+    <div className='info' dangerouslySetInnerHTML={{__html: content}} >
+    <div>
+email
+    </div>
+    <div>
+      more
+    </div>
+
   )
 }
 

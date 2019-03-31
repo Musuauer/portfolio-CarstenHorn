@@ -99,7 +99,12 @@ a:hover{
     margin-bottom: 4rem;
     line-height: 1.5;
 }
-
+.impressum-text{
+    text-align: left;
+}
+.impressum-text p{
+    margin: 1rem 0;
+}
 .photos-container{
     /* border: 1px solid red; */
 }
