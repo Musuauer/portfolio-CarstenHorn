@@ -30,7 +30,7 @@ class Menubar extends Component {
         <div className='menu-item'>
           <h2>
             <Link
-              to='/info'
+              to='/Info'
               activeClassName='current'
             >
                       Info
