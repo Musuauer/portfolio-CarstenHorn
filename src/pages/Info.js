@@ -17,7 +17,7 @@ const Info = (props) => (
               pdf {
                 file {
                   url
-                  fileName
+                  
                 }
               }
               

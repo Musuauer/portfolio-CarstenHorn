@@ -16,7 +16,7 @@ export class ProjectTemplate extends React.Component {
     currentIndex === 0
       ? (newIndex = this.props.images.length - 1)
       : (newIndex = currentIndex - 1)
-      console.log('currentIndex:', currentIndex, 'newIndex:', newIndex)
+    console.log('currentIndex:', currentIndex, 'newIndex:', newIndex)
 
     this.setState({
       currentIndex: newIndex
@@ -40,12 +40,6 @@ export class ProjectTemplate extends React.Component {
 
     return (
       <React.Fragment>
-        {/* <div className='project'>
-          <div className='project-header'>
-            <h3 className='project-name'>{title}</h3>
-          </div>
-
-        </div> */}
         {console.log('images', images[currentIndex], 'index:', currentIndex)}
         <Img
           fluid={images[currentIndex].fluid}
@@ -65,16 +59,17 @@ export class ProjectTemplate extends React.Component {
           >{'>'}</div>
         </div>
 
-
-
       </React.Fragment>
     )
   }
 }
 
 const Project = ({ data }) => {
-  const post = data.allContentfulProject || data.allContentfulBook
-  console.log('ProjectData', post.edges[0].node)
+  console.log('Data', data)
+
+  const post = data.allContentfulBook.edges[0].node.images ? data.allContentfulBook : data.allContentfulProject
+
+  console.log('ProjectData', post)
   return (
     <Layout>
 

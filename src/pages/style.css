@@ -26,6 +26,7 @@ html
 
 .App{
     width: 90%;
+    height: 100vh;
     position: relative;
     margin: 0 auto;
 }
@@ -69,7 +70,7 @@ a{
     position: relative;
 }
 a:hover{
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 .link {
     font-size: 1.4rem;
@@ -95,17 +96,22 @@ a:hover{
     /* border: 2px solid blue; */
 }
 .project-text{
-    margin-top: 1rem;
+    margin-top: 3rem;
     margin-bottom: 4rem;
     line-height: 1.5;
 }
 .impressum-text, .info-text{
     text-align: left;
 }
-.impressum-text p{
+.impressum-text p, .info-text p{
     margin: 1rem 0;
 }
-
+.info-text a{
+    display: inline;
+}
+.info-text h1{
+    font-weight: 600;
+}
 .project-images{
     max-height: 100%;
     max-width: 100%;
@@ -188,9 +194,8 @@ a:hover{
     justify-content: space-between;
     }
     main{
-    margin: 1rem auto;
+    margin: 0 auto;
     text-align: center;
-    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     height: 80vh;

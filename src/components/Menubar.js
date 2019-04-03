@@ -10,6 +10,7 @@ class Menubar extends Component {
             <Link
               to='/Woanders'
               activeClassName='current'
+
             >
                       Woanders
             </Link>
@@ -21,6 +22,7 @@ class Menubar extends Component {
             <Link
               to='/Archiv'
               activeClassName='current'
+
             >
                       Archiv
             </Link>
@@ -32,6 +34,7 @@ class Menubar extends Component {
             <Link
               to='/Info'
               activeClassName='current'
+
             >
                       Info
             </Link>
@@ -43,6 +46,7 @@ class Menubar extends Component {
             <Link
               to='/Impressum'
               activeClassName='current'
+
             >
                      Impressum
             </Link>
