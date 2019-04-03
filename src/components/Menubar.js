@@ -8,9 +8,9 @@ class Menubar extends Component {
         <div className='menu-item'>
           <h2>
             <Link
-              to='/Woanders'
+              to='/woanders'
               activeClassName='current'
-
+              partiallyActive
             >
                       Woanders
             </Link>
@@ -20,9 +20,9 @@ class Menubar extends Component {
         <div className='menu-item'>
           <h2>
             <Link
-              to='/Archiv'
+              to='/archiv'
               activeClassName='current'
-
+              partiallyActive
             >
                       Archiv
             </Link>
@@ -32,7 +32,7 @@ class Menubar extends Component {
         <div className='menu-item'>
           <h2>
             <Link
-              to='/Info'
+              to='/info'
               activeClassName='current'
 
             >
@@ -44,7 +44,7 @@ class Menubar extends Component {
         <div className='menu-item'>
           <h2>
             <Link
-              to='/Impressum'
+              to='/impressum'
               activeClassName='current'
 
             >

@@ -67,7 +67,7 @@ export class ProjectTemplate extends React.Component {
 const Project = ({ data }) => {
   console.log('Data', data)
 
-  const post = data.allContentfulBook.edges[0].node.images ? data.allContentfulBook : data.allContentfulProject
+  const post = (data.allContentfulBook.edges[0]) ? data.allContentfulBook : data.allContentfulProject
 
   console.log('ProjectData', post)
   return (
