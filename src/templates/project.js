@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
+import ArrowLeft from '../Utils/ArrowLeft'
+import ArrowRight from '../Utils/ArrowRight'
 
 export class ProjectTemplate extends React.Component {
   state = {
@@ -39,7 +41,7 @@ export class ProjectTemplate extends React.Component {
     const { images, currentIndex } = this.state
 
     return (
-      <React.Fragment>
+      <div className='images-container'>
         {console.log('images', images[currentIndex], 'index:', currentIndex)}
         <Img
           fluid={images[currentIndex].fluid}
@@ -52,14 +54,22 @@ export class ProjectTemplate extends React.Component {
         <div className='arrows'>
           <div
             onClick={() => this.nextLeft()}
-          >{'<'}</div>
+          >
+            <ArrowLeft
+              width='2rem'
+            />
+          </div>
 
           <div
             onClick={() => this.nextRight()}
-          >{'>'}</div>
+          >
+            <ArrowRight
+              width='2rem'
+            />
+          </div>
         </div>
+      </div>
 
-      </React.Fragment>
     )
   }
 }

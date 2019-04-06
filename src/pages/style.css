@@ -93,7 +93,14 @@ a:hover{
     width: 70%;
     height: 100%;
     align-items: stretch;
-    /* border: 2px solid blue; */
+    border: 1px solid blue;
+}
+.images-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 .project-text{
     margin-top: 3rem;
@@ -127,6 +134,13 @@ a:hover{
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+}
+.arrows div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 2rem;
+    height: 2rem;
 }
 
 /* --- HOME --- */
@@ -199,6 +213,7 @@ a:hover{
     display: flex;
     justify-content: center;
     height: 80vh;
+    border: 1px solid red;
     }
     .project-list{
         text-align: left;
