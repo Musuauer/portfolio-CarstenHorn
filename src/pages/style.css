@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
 img, embed, object, video{
     max-width: 100%;         /*-to prevent overflow from its container-*/
@@ -40,8 +40,8 @@ header{
     width: 100%;
 }
 h1, h2, h3, h4, p, a{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 300;
 
 }
 h1{
@@ -93,7 +93,7 @@ a:hover{
     width: 70%;
     height: 100%;
     align-items: stretch;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 .images-container{
     position: relative;
@@ -103,7 +103,7 @@ a:hover{
     height: 100%;
 }
 .project-text{
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-bottom: 4rem;
     line-height: 1.5;
 }
@@ -117,7 +117,7 @@ a:hover{
     display: inline;
 }
 .info-text h1{
-    font-weight: 600;
+    font-weight: 400;
 }
 .project-images{
     max-height: 100%;
@@ -126,7 +126,7 @@ a:hover{
 .arrows{
     font-size: 1.5rem;
     position: fixed;
-    bottom: 2rem;
+    bottom: 3rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -164,7 +164,7 @@ a:hover{
 
 .menu-btn {
 	font-size: 18px;
-	font-weight: 200;
+	font-weight: 100;
 	z-index: 9999;
     right: 0.6rem;
     position: fixed;
@@ -213,7 +213,7 @@ a:hover{
     display: flex;
     justify-content: center;
     height: 80vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     }
     .project-list{
         text-align: left;

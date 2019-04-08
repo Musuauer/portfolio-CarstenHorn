@@ -56,7 +56,7 @@ export class ProjectTemplate extends React.Component {
             onClick={() => this.nextLeft()}
           >
             <ArrowLeft
-              width='2rem'
+              width='1.3rem'
             />
           </div>
 
@@ -64,7 +64,7 @@ export class ProjectTemplate extends React.Component {
             onClick={() => this.nextRight()}
           >
             <ArrowRight
-              width='2rem'
+              width='1.3rem'
             />
           </div>
         </div>
