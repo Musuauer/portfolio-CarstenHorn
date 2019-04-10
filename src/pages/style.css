@@ -117,8 +117,10 @@ a:hover{
 .info-text a{
     display: inline;
 }
-.info-text h1{
-    font-weight: 400;
+.info-text h2{
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
 }
 .project-images{
     max-height: 100%;
