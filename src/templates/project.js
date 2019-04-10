@@ -37,7 +37,6 @@ export class ProjectTemplate extends React.Component {
   }
 
   render () {
-    // const { title } = this.props
     const { images, currentIndex } = this.state
 
     return (
@@ -128,5 +127,5 @@ query projectQuery ($path: String!){
       }
     }
   }
-  } 
+  }
 `
