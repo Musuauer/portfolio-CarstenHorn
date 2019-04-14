@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
 
 img, embed, object, video{
     max-width: 100%;         /*-to prevent overflow from its container-*/
@@ -74,6 +74,7 @@ a:hover{
 }
 .link {
     font-size: 1.4rem;
+    font-weight: 400;
 }
 
 .menu{
@@ -125,8 +126,10 @@ a:hover{
 .info-text a{
     display: inline;
 }
-.info-text h1{
-    font-weight: 400;
+.info-text h2{
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
 }
 .project-images{
     max-height: 100%;
@@ -230,7 +233,7 @@ a:hover{
     }
     .gatsby-resp-image-image {
         cursor: default;
-        
+
     }
 
 }
