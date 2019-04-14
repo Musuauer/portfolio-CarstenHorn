@@ -17,7 +17,7 @@ const Info = (props) => (
               pdf {
                 file {
                   url
-                  title
+                
                 }
               }
             }
@@ -37,8 +37,6 @@ const Info = (props) => (
               <p key={index}>
                 {line}
               </p>)}
-
-
 
           </div>
         </div>

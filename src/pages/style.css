@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+/* @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400'); */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+
 
 img, embed, object, video{
     max-width: 100%;         /*-to prevent overflow from its container-*/
@@ -40,7 +44,7 @@ header{
     width: 100%;
 }
 h1, h2, h3, h4, p, a{
-    font-family: 'Open sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
 
 }
@@ -73,6 +77,7 @@ a:hover{
     /* text-decoration: underline; */
 }
 .link {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
 }
@@ -85,7 +90,8 @@ a:hover{
     z-index: 99;
 }
 .current {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    font-weight: 400;
 }
 .contact p a{
     display: inline-block;
@@ -121,15 +127,19 @@ a:hover{
     margin-bottom: 1rem;
 }
 .info-text p{
-    margin: 1rem 0;
+    margin-bottom: 1rem;
 }
 .info-text a{
     display: inline;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
 .info-text h2{
-    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
-    margin-bottom: 2rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
 }
 .project-images{
     max-height: 100%;
