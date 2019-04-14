@@ -110,7 +110,16 @@ a:hover{
 .impressum-text, .info-text{
     text-align: left;
 }
-.impressum-text p, .info-text p{
+.impressum-text, .datenschutz-text{
+    margin-top: 4rem;
+}
+.impressum-text p:first-child{
+    margin-bottom: 1rem;
+}
+.impressum-text p:not(:first-child){
+    margin-bottom: 1rem;
+}
+.info-text p{
     margin: 1rem 0;
 }
 .info-text a{

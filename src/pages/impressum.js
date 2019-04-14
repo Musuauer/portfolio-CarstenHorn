@@ -13,6 +13,10 @@ const Impressum = (props) => (
               impressumText{
                 impressumText
               }
+              copyright
+              datenschutz{
+                datenschutz
+              }
             }
           }
         }
@@ -24,10 +28,27 @@ const Impressum = (props) => (
         <div className='impressum-container'>
           <div className='impressum-text'>
             {console.log('impressum', data.allContentfulImpressum.edges[0].node.impressumText)}
-            {data.allContentfulImpressum.edges[0].node.impressumText.impressumText.split('\n').map(line =>
-              <p key={line}>
-                {line}
-              </p>)}
+
+            <div className='copyright'>
+              <p>
+                {data.allContentfulImpressum.edges[0].node.copyright}
+              </p>
+            </div>
+
+            <div className='impressum-text'>
+              {data.allContentfulImpressum.edges[0].node.impressumText.impressumText.split('\n\n').map(line =>
+                <p key={line}>
+                  {line}
+                </p>)}
+            </div>
+
+            <div className='datenschutz-text'>
+              {data.allContentfulImpressum.edges[0].node.datenschutz.datenschutz.split('\n\n').map(line =>
+                <p key={line}>
+                  {line}
+                </p>)}
+            </div>
+
           </div>
         </div>
       </Layout>
