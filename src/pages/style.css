@@ -116,6 +116,8 @@ a:hover{
 }
 .impressum-text, .info-text{
     text-align: left;
+    line-height: 1.5;
+
 }
 .impressum-text, .datenschutz-text{
     margin-top: 4rem;
