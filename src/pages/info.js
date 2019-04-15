@@ -14,12 +14,12 @@ const Info = (props) => (
                 bio
               }
               email
-              pdf {
-                file {
+              pdf{
+                title
+                file{
                   url
-                
-                }
-              }
+                    }
+                  }
             }
           }
         }

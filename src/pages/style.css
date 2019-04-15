@@ -1,6 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400'); */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400'); */
 
 
 
@@ -46,25 +46,25 @@ header{
 h1, h2, h3, h4, p, a{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    letter-spacing: .01rem;
 
 }
 h1{
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 3rem;
 }
-h2{
-    font-size: 1.1rem;
+h2,h3{
+    font-size: 1.05rem;
 }
-h3{
-    font-size: 1.1rem;
-}
+
 h4{
     font-size: .85rem;
 }
 
 p{
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     margin: 0;
+    letter-spacing: 0;
 }
 
 a{
@@ -77,9 +77,10 @@ a:hover{
     /* text-decoration: underline; */
 }
 .link {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
+    letter-spacing: .02rem;
 }
 
 .menu{
@@ -133,12 +134,12 @@ a:hover{
 }
 .info-text a{
     display: inline;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
 }
 .info-text h2{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
     margin-bottom: 4rem;
