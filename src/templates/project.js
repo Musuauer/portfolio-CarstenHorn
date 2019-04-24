@@ -40,15 +40,18 @@ export class ProjectTemplate extends React.Component {
     const { images, currentIndex } = this.state
 
     return (
-      <div className='images-container'>
-        {console.log('images', images[currentIndex], 'index:', currentIndex)}
-        <Img
-          fluid={images[currentIndex].fluid}
-          imgStyle={{objectFit: 'contain'}}
-          className='project-images'
-          fadeIn={false}
+      <React.Fragment>
+        <div className='images-container'>
+          {console.log('images', images[currentIndex], 'index:', currentIndex)}
+          <Img
+            fluid={images[currentIndex].fluid}
+            imgStyle={{objectFit: 'contain'}}
+            className='project-images'
+            fadeIn={false}
           // backgroundColor={'white'}
-        />
+          />
+
+        </div>
 
         <div className='arrows'>
           <div
@@ -67,7 +70,12 @@ export class ProjectTemplate extends React.Component {
             />
           </div>
         </div>
-      </div>
+        <div className='title'>
+          <p>
+            {this.props.title}
+          </p>
+        </div>
+      </React.Fragment>
 
     )
   }
