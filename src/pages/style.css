@@ -269,6 +269,7 @@ main{
     display: flex;
     justify-content: center;
     height: 70vh;
+    overflow: hidden;
     /* border: 1px solid red; */
     }
     .project-list{
