@@ -24,6 +24,7 @@ export const ProjectTemplate = (props) => {
   return (
     <React.Fragment>
       <div className='images-container'>
+
         {transitions.map(({ item, props, key }) => {
           const currentImage = availableImages[item]
           return <animated.div key={key} style={props} >
