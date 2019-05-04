@@ -68,13 +68,13 @@ const Info = (props) => (
                   text
                   place
                   title
-                }  
+                }
                 _10{
                   date
                   text
                   place
                   title
-                }  
+                }
                 _11{
                   date
                   text
@@ -111,7 +111,7 @@ const Info = (props) => (
               </p>)}
 
             <div className='shows'>
-              <h3>Austellungen</h3>
+              <h3>Ausstellungen</h3>
               {console.log('shows...', Object.entries(data.allContentfulInfo.edges[0].node.shows).sort(([, v1], [, v2]) => +v2 - +v1))}
               {Object.entries(data.allContentfulInfo.edges[0].node.shows).map(show =>
                 <div className='show' key={show[0]}>
@@ -126,9 +126,7 @@ const Info = (props) => (
                   </p>
 
                 </div>
-              ).sort(function (a, b) {
-                return a < b ? -1 : (a > b ? 1 : 0)
-              })}
+              ).reverse()}
             </div>
 
             <div className='press'>
