@@ -197,6 +197,10 @@ main{
     width: 2rem;
     height: 2rem;
 }
+.press a{
+    display: block;
+    margin-bottom: 1rem;
+}
 
 /* --- HOME --- */
 .home-images{
@@ -299,6 +303,13 @@ main{
     }
     .show p{
         margin: 0;
+    }
+    .press h3{
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+        letter-spacing: .02rem;
     }
     .gatsby-resp-image-image {
         cursor: default;
