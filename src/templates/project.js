@@ -11,14 +11,26 @@ export const ProjectTemplate = (props) => {
   const availableImages = props.images
 
   const [ index, set ] = useState(0)
+
+  const [ direction, setDirection ] = useState('')
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const nextRight = useCallback(() => set(state => (state + 1) % availableImages.length), [])
-  const nextLeft = useCallback(() => set(state => (state === 0 ? availableImages.length - 1 : state - 1), []))
+  const nextRight = useCallback(() => {
+    setDirection('right')
+    set(state => (state + 1) % availableImages.length)
+  }, []
+  )
+
+  const nextLeft = useCallback(() => {
+    setDirection('left')
+    set(state => (state === 0 ? availableImages.length - 1 : state - 1))
+  }, []
+  )
 
   const transitions = useTransition(index, p => p, {
-    from: { opacity: 0, transform: 'translate3d(100%,0,0)', position: 'absolute', top: '0' },
+    from: { opacity: 0, transform: `translate3d( ${direction === 'right' ? '100%' : direction === 'left' ? '-100%' : 0},0,0)`, position: 'absolute', top: '0' },
     enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
-    leave: { opacity: 0, transform: 'translate3d(-50%,0,0)' }
+    leave: { opacity: 0, transform: `translate3d(${direction === 'right' ? '-50%' : direction === 'left' ? '100%' : 0},0,0)` }
   })
 
   return (
