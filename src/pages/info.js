@@ -136,6 +136,8 @@ const Info = (props) => (
                 <a
                   key={pdf.file.url}
                   href={`http:${pdf.file.url}`}
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   {pdf.title}
                 </a>

@@ -305,8 +305,9 @@ main{
         letter-spacing: .02rem;
     }
     .shows span{
-        font-weight: 400;
+        font-weight: 300;
         margin-right: .5rem;
+        text-decoration: underline;
     }
     .show{
         margin-bottom: 1rem;
@@ -325,11 +326,11 @@ main{
         letter-spacing: .02rem;
     }
     .press a{
-        font-weight: 300;
-    }
-    .press a:hover{
         font-weight: 400;
     }
+    /* .press a:hover{
+        font-weight: 400;
+    } */
     .gatsby-resp-image-image {
         cursor: default;
 
