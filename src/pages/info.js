@@ -129,6 +129,21 @@ const Info = (props) => (
               ).reverse()}
             </div>
 
+            <div className='press'>
+              <h3>Presse</h3>
+              {console.log('press:', data.allContentfulInfo.edges[0].node.pdf)}
+              {data.allContentfulInfo.edges[0].node.pdf.map(pdf => (
+                <a
+                  key={pdf.file.url}
+                  href={`http:${pdf.file.url}`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {pdf.title}
+                </a>
+              ))}
+            </div>
+
           </div>
         </div>
       </Layout>

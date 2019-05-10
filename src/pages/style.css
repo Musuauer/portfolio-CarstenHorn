@@ -16,6 +16,8 @@ body, html{
             width:100%;
             margin: 0;
             padding: 0;
+            max-width: 100%;
+            overflow-x: hidden;
 
 }
 body{
@@ -199,6 +201,11 @@ main{
     width: 2rem;
     height: 2rem;
 }
+.press a{
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
 
 /* --- HOME --- */
 .home-images{
@@ -271,8 +278,14 @@ main{
     display: flex;
     justify-content: center;
     height: 70vh;
-    overflow: hidden;
+    /* overflow-y: visible;
+    overflow-x: hidden; */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     /* border: 1px solid red; */
+    }
+    main::-webkit-scrollbar {
+        display: none;
     }
     .project-list{
         text-align: left;
@@ -294,8 +307,9 @@ main{
         letter-spacing: .02rem;
     }
     .shows span{
-        font-weight: 400;
+        font-weight: 300;
         margin-right: .5rem;
+        text-decoration: underline;
     }
     .show{
         margin-bottom: 1rem;
@@ -303,9 +317,29 @@ main{
     .show p{
         margin: 0;
     }
+    .press{
+        margin-bottom: 4rem;
+    }
+    .press h3{
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+        font-weight: 300;
+        letter-spacing: .02rem;
+    }
+    .press a{
+        font-weight: 400;
+    }
+    /* .press a:hover{
+        font-weight: 400;
+    } */
     .gatsby-resp-image-image {
         cursor: default;
 
+    }
+    ::-webkit-scrollbar {
+        width: 0px;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
     }
 
 }
