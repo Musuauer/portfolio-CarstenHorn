@@ -34,15 +34,9 @@ export const ProjectTemplate = (props) => {
   // })
 
   const transitions = useTransition(index, p => p, {
-<<<<<<< HEAD
     from: { opacity: 0, position: 'absolute', top: '0' },
     enter: { opacity: 1 },
     leave: { opacity: 0 }
-=======
-    from: { opacity: 0, transform: `translate3d( ${direction === 'right' ? '100%' : direction === 'left' ? '-100%' : 0},0,0)`, position: 'absolute', top: '0' },
-    enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
-    leave: { opacity: 0, transform: `translate3d(${direction === 'right' ? '-50%' : direction === 'left' ? '100%' : 0},0,0)` }
->>>>>>> ef164c8a38acfef25be2ea62cc10dbda069b07f7
   })
 
   return (
