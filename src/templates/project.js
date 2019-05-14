@@ -2,7 +2,6 @@ import React, { useState, useCallback } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
-import ArrowLeft from '../Utils/ArrowLeft'
 import ArrowRight from '../Utils/ArrowRight'
 
 import { useTransition, animated } from 'react-spring/web.cjs'
@@ -12,26 +11,11 @@ export const ProjectTemplate = (props) => {
 
   const [ index, set ] = useState(0)
 
-  const [ direction, setDirection ] = useState('')
-
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const nextRight = useCallback(() => {
-    setDirection('right')
     set(state => (state + 1) % availableImages.length)
   }, []
   )
-
-  const nextLeft = useCallback(() => {
-    setDirection('left')
-    set(state => (state === 0 ? availableImages.length - 1 : state - 1))
-  }, []
-  )
-
-  // const transitions = useTransition(index, p => p, {
-  //   from: { opacity: 0, transform: 'translate3d(100%,0,0)', position: 'absolute', top: '0' },
-  //   enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
-  //   leave: { opacity: 0, transform: 'translate3d(-50%,0,0)' }
-  // })
 
   const transitions = useTransition(index, p => p, {
     from: { opacity: 0, position: 'absolute', top: '0' },
@@ -58,13 +42,6 @@ export const ProjectTemplate = (props) => {
       </div>
 
       <div className='arrows'>
-        {/* <div
-          onClick={() => nextLeft()}
-        >
-          <ArrowLeft
-            width='1.3rem'
-          />
-        </div> */}
 
         <div
           onClick={() => nextRight()}
