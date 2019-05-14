@@ -64,9 +64,17 @@ const Archiv = (props) => (
               />
             ))}
 
-          <p className={'project-text'}>
+          <p className='project-text'>
         Das Buch- und Ausstellungsprojekt  ‚Woanders’ versammelt Bilder aus 20 Jahren, die ums Wagenleben kreisen. Es ist das Porträt eines Wagenplatzes, seiner Räumung 2014 und einiger Bewohner*innen. Die Bilder zeigen weniger spektakuläre Situationen im öffentlichen Raum als vielmehr Privates und Alltägliches. Blicke, Lücken und Leerstellen sind dabei genauso im Fokus, wie das Bleiben von Dingen und Beziehungen. Es wird ein Bogen geschlagen bis heute, zu den Freundschaften, zu anderen Orten, wo Gemeinschaft gelebt wird.
           </p>
+          <p className='book-info'>
+            <span>
+          Carsten Horn, Woanders – Eine fotografische Erzählung vom Unterwegssein und vom Bleiben
+            </span>
+          234 Seiten, 158 Abbildungen, s/w und Farbe, 260 x 280 mm
+          </p>
+
+          {/* <img src='../../static/img/woanders_buch__Cover.jpeg' alt='book cover' /> */}
 
         </div>
       </Layout>
