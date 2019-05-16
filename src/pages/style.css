@@ -86,7 +86,7 @@ a:hover{
 }
 .link {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: .02rem;
 }
@@ -173,12 +173,12 @@ main{
 .info-text a{
     display: inline;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 .info-text h2{
     font-family: 'Roboto', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 400;
     margin-bottom: 4rem;
     margin-top: 0;
