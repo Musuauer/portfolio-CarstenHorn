@@ -18,7 +18,10 @@ class Project extends Component {
         </Link>
 
         <p className={'project-text'}>
-          {project.description.description}
+          {project.description.description.split('\n').map((line, index) =>
+            <p key={index}>
+              {line}
+            </p>)}
         </p>
 
       </div>
