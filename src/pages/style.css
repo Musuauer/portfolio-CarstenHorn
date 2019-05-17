@@ -330,9 +330,12 @@ main{
         font-weight: 300;
         letter-spacing: .02rem;
     }
-    /* .press a:hover{
+    .press a{
+        font-weight: 300;
+    }
+    .press a:hover{
         font-weight: 400;
-    } */
+    }
     .gatsby-resp-image-image {
         cursor: default;
 
