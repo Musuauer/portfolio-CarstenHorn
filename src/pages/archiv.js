@@ -22,6 +22,16 @@ class Project extends Component {
             <p key={index}>
               {line}
             </p>)}
+          {project.website &&
+            <p>
+              <a
+                href={project.website[1]}
+                target='_blank'
+                rel='noopener noreferrer'>
+                {project.website[0]}
+              </a>
+            </p>
+          }
         </p>
 
       </div>
@@ -45,6 +55,7 @@ const Archiv = (props) => (
               description {
                 description
               }
+              website
             }
           }
         }
