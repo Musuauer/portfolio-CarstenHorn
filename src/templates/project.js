@@ -18,28 +18,28 @@ export const ProjectTemplate = (props) => {
   )
 
   const transitions = useTransition(index, p => p, {
-    from: { opacity: 0, position: 'absolute', top: '0' },
+    from: { opacity: 0, position: 'absolute', top: 0, left: 0, right: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 }
   })
 
   return (
-    <React.Fragment>
-      <div className='images-container'>
+    <div style={{ position: 'relative', height: '100%' }}>
 
-        {transitions.map(({ item, props, key }) => {
-          const currentImage = availableImages[item]
-          return <animated.div key={key} style={props} >
-            <Img
-              fluid={currentImage.fluid}
-              imgStyle={{objectFit: 'contain'}}
-              className='project-images'
-              fadeIn={false}
-              // backgroundColor={'white'}
-            />
-          </animated.div>
-        })}
-      </div>
+      {transitions.map(({ item, props, key }) => {
+        const currentImage = availableImages[item]
+        return <animated.div
+          key={key} style={props}
+          className='home-images'>
+          <Img
+            fluid={currentImage.fluid}
+            imgStyle={{objectFit: 'contain'}}
+            className='home-images'
+            fadeIn={false}
+            // backgroundColor={'white'}
+          />
+        </animated.div>
+      })}
 
       <div className='arrows'>
 
@@ -56,7 +56,7 @@ export const ProjectTemplate = (props) => {
           {props.title}
         </p>
       </div>
-    </React.Fragment>
+    </div>
 
   )
 }

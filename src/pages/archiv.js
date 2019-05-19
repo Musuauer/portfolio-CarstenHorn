@@ -17,7 +17,7 @@ class Project extends Component {
           {project.title}
         </Link>
 
-        <p className={'project-text'}>
+        <div className={'project-text'}>
           {project.description.description.split('\n').map((line, index) =>
             <p key={index}>
               {line}
@@ -32,7 +32,7 @@ class Project extends Component {
               </a>
             </p>
           }
-        </p>
+        </div>
 
       </div>
     )
