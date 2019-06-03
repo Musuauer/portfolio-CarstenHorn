@@ -133,13 +133,9 @@ main{
 }
 .title{
     position: fixed;
-    /* bottom: 2rem;
-    left: 0;
-    right: 0; */
-    bottom: 1.5rem;
-    left: 4.4rem;
+    bottom: 2rem;
+    left: 1rem;
     margin: 0 auto;
-    /* width: 40%; */
     display: flex;
     justify-content: center;
 }
@@ -188,7 +184,7 @@ main{
     font-size: 1.5rem;
     position: fixed;
     bottom: 2rem;
-    right: 4.4rem;
+    right: 1rem;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -280,6 +276,8 @@ main{
         margin-bottom: 5rem;
     }
     .info-container{
+        /* width: 200%;
+        margin-left: -5rem; */
         margin-top: .5rem;
     }
     .impressum-container{
@@ -374,6 +372,25 @@ main{
         height: 100%;
         /* border: 1px solid yellow; */
     }
-    
+    .info-container{
+        margin-top: .5rem;
+    }
+    .arrows{
+        font-size: 1.5rem;
+        position: fixed;
+        bottom: 2rem;
+        right: 4.4rem;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .title{
+        position: fixed;
+        bottom: 1.5rem;
+        left: 4.4rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
 
 }
