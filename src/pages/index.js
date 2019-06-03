@@ -58,7 +58,7 @@ export default class IndexPage extends React.Component {
          <Img
            fluid={this.state.randomImage}
            imgStyle={{objectFit: 'contain'}}
-           className='home-images'
+           className='images'
            fadeIn={false}
            backgroundColor={'white'}
          />

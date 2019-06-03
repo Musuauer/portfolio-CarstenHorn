@@ -34,7 +34,7 @@ export const ProjectTemplate = (props) => {
           <Img
             fluid={currentImage.fluid}
             imgStyle={{objectFit: 'contain'}}
-            className='home-images'
+            className='images'
             fadeIn={false}
             // backgroundColor={'white'}
           />
