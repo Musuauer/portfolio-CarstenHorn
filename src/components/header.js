@@ -83,6 +83,17 @@ class Header extends React.Component {
                     </Link>
                   </h2>
                 </div>
+
+                <div className='menu-item'>
+                  <h2>
+                    <Link
+                      to='/impressum'
+                      activeClassName='current'
+                    >
+                      Impressum
+                    </Link>
+                  </h2>
+                </div>
                 <br />
                 <br />
               </div>

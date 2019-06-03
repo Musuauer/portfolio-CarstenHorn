@@ -110,10 +110,9 @@ main{
     display: inline-block;
 }
 .content{
-    width: 50%;
+    width: 100%;
     height: 100%;
     align-items: stretch;
-    /* border: 1px solid red; */
 }
 .images-container{
     position: relative;
@@ -122,24 +121,21 @@ main{
     justify-content: center;
     align-items: center;
     height: 100%;
-    /* border: 1px solid yellow; */
+}
+.images{
+    height: 72%;
 }
 .project-images{
     height: 555px;
     width: 555px;
     min-height: 555px;
     min-width: 555px;
-    /* border: 1px solid blue; */
 }
 .title{
     position: fixed;
-    /* bottom: 2rem;
-    left: 0;
-    right: 0; */
-    bottom: 1.5rem;
-    left: 4.4rem;
+    bottom: 2rem;
+    left: 1rem;
     margin: 0 auto;
-    /* width: 40%; */
     display: flex;
     justify-content: center;
 }
@@ -188,11 +184,7 @@ main{
     font-size: 1.5rem;
     position: fixed;
     bottom: 2rem;
-    /* left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 90%; */
-    right: 4.4rem;
+    right: 1rem;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -214,6 +206,10 @@ main{
 .home-images{
     height: 100%;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
 }
 
 
@@ -222,9 +218,12 @@ main{
 
 .mobile-nav{
     margin-top: 0rem;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     position: fixed;
     height: 50px;
+    right: 0;
+    left: 0;
     display: inline-block;
 }
 
@@ -233,13 +232,14 @@ main{
 	font-size: 18px;
 	font-weight: 100;
 	z-index: 9999;
-    right: 0.6rem;
-    position: fixed;
+    right: 0;
+    top: 0;
+    position: absolute;
     margin-top: 0.9rem;
 }
 
 .menu-content{
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 7rem;
     position: relative;
@@ -256,36 +256,16 @@ main{
     padding-bottom: 1rem;
 }
 
+/* ---from desktop--- */
 
-/*-------------------------MEDIA QUERIES-------------------------------------*/
-
-
-@media only screen and (min-width: 1000px){
-    .mobile-nav{
-    display: none;
-    }
-    header{
-    display: flex;
-    justify-content: space-between;
-    top: 2rem;
-    margin: 0 auto;
-    }
-    .menu{
-    display: flex;
-    width: 25rem;
-    justify-content: space-between;
-    }
-    main{
+main{
     margin: 0 auto;
     text-align: center;
     display: flex;
     justify-content: center;
     height: 70vh;
-    /* overflow-y: visible;
-    overflow-x: hidden; */
     -ms-overflow-style: none;
     scrollbar-width: none;
-    /* border: 1px solid red; */
     }
     main::-webkit-scrollbar {
         display: none;
@@ -296,6 +276,8 @@ main{
         margin-bottom: 5rem;
     }
     .info-container{
+        /* width: 200%;
+        margin-left: -5rem; */
         margin-top: .5rem;
     }
     .impressum-container{
@@ -343,6 +325,72 @@ main{
     ::-webkit-scrollbar {
         width: 0px;  /* Remove scrollbar space */
         background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        top: 2rem;
+        margin: 0 auto;
+        z-index: 1;
+        }
+
+
+/*-------------------------MEDIA QUERIES-------------------------------------*/
+
+
+@media only screen and (min-width: 1000px){
+    .mobile-nav{
+    display: none;
+    }
+   
+    .menu{
+    display: flex;
+    width: 25rem;
+    justify-content: space-between;
+    }
+
+    .home-images{
+        height: 100%;
+        cursor: pointer;
+    }
+    .images{
+        height: 100%;
+    }
+
+    .content{
+        width: 50%;
+        height: 100%;
+        align-items: stretch;
+        /* border: 1px solid red; */
+    }
+    .images-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        /* border: 1px solid yellow; */
+    }
+    .info-container{
+        margin-top: .5rem;
+    }
+    .arrows{
+        font-size: 1.5rem;
+        position: fixed;
+        bottom: 2rem;
+        right: 4.4rem;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .title{
+        position: fixed;
+        bottom: 1.5rem;
+        left: 4.4rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
     }
 
 }
