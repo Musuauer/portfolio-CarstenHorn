@@ -26,8 +26,8 @@ class Layout extends Component {
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
-                { name: 'description', content: 'My work is based on speech performances and testimonial actions. It promotes the concept of intimacy with the audience where the body of the artist and those of the participants/collaborators are the subject and, simultaneously, the transmitting mechanism of the work.' },
-                { name: 'keywords', content: 'contemporary, art, photography, berlin' }
+                { name: 'description', content: 'Carsten Horn ist Fotograf und Kunstvermittler in Berlin. Seine Arbeit erkundet die Grenzen zwischen dokumentarischer und künstlerischer Fotografie. Inhaltlich interessieren ihn Architektur und Formen des Zusammenlebens im Spiegel von Utopie und Alltag.' },
+                { name: 'keywords', content: 'contemporary, art, photography, berlin, documentary' }
               ]}
             >
               <html lang='de' />
