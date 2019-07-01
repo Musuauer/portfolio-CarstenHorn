@@ -75,6 +75,12 @@ const Info = (props) => (
                   place
                   title
                 }
+                _11{
+                  date
+                  text
+                  place
+                  title
+                }
               }
               pdf{
                 title
