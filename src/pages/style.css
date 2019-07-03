@@ -90,7 +90,13 @@ a:hover{
     font-weight: 400;
     letter-spacing: .02rem;
 }
-
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+u{
+    display: block;
+}
 main{
     width: 100%;
 }
