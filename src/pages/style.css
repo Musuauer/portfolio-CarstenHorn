@@ -153,9 +153,6 @@ main{
     margin-bottom: 4rem;
     line-height: 1.5;
 }
-.book-info span{
-    display: block;
-}
 .impressum-text, .info-text{
     text-align: left;
     line-height: 1.5;
