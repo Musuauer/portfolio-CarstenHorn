@@ -69,9 +69,8 @@ const Archiv = (props) => (
           </p>
           <p className='book-info'>
             <span>
-          Carsten Horn, Woanders – Eine fotografische Erzählung vom Unterwegssein und vom Bleiben
+              <em>Carsten Horn, Woanders – Eine fotografische Erzählung vom Unterwegssein und vom Bleiben</em>, 234 Seiten, 158 Abbildungen, s/w und Farbe, 260 x 280 mm
             </span>
-          234 Seiten, 158 Abbildungen, s/w und Farbe, 260 x 280 mm
           </p>
 
           {/* <img src='../../static/img/woanders_buch__Cover.jpeg' alt='book cover' /> */}

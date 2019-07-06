@@ -155,7 +155,6 @@ main{
 }
 .book-info span{
     display: block;
-    text-decoration: underline;
 }
 .impressum-text, .info-text{
     text-align: left;
