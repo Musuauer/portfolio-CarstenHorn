@@ -30,7 +30,7 @@ export const ProjectTemplate = (props) => {
         const currentImage = availableImages[item]
         return <animated.div
           key={key} style={props}
-          className='home-images'>
+          className='home-images' onClick={() => nextRight()}>
           <Img
             fluid={currentImage.fluid}
             imgStyle={{objectFit: 'contain'}}

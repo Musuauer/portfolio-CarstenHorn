@@ -94,7 +94,7 @@ ul{
     list-style: none;
     padding-left: 0;
 }
-i{
+.shows i{
     display: block;
 }
 main{
@@ -153,6 +153,7 @@ main{
     margin-bottom: 4rem;
     line-height: 1.5;
 }
+
 .impressum-text, .info-text{
     text-align: left;
     line-height: 1.5;
