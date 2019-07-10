@@ -49,6 +49,24 @@ const Impressum = (props) => (
                 </p>)}
             </div>
 
+            <div className='credit'>
+              <p>
+                Design und entwicklung: <a
+                  href='https://www.juliamarquardt.de/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                   Julia Marquardt
+                </a> und <a
+                  href='https://www.guillermogudino.com/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                   Guillermo Gudiño
+                </a>
+              </p>
+            </div>
+
           </div>
         </div>
       </Layout>

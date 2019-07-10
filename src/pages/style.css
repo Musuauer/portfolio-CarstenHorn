@@ -208,6 +208,9 @@ main{
     margin-top: -3rem;
     margin-bottom: 4rem;
 }
+.credit a{
+    display: inline-block;
+}
 
 /* --- HOME --- */
 .home-images{
