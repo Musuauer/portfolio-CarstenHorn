@@ -17,22 +17,18 @@ class Project extends Component {
           {project.title}
         </Link>
 
-        <div className={'project-text'}>
-          {project.description.description.split('\n').map((line, index) =>
-            <p key={index}>
-              {line}
-            </p>)}
-          {project.website &&
-            <p>
-              <a
-                href={project.website[1]}
-                target='_blank'
-                rel='noopener noreferrer'>
-                {project.website[0]}
-              </a>
-            </p>
-          }
-        </div>
+        <div className='project-text' dangerouslySetInnerHTML={{ __html: project.description2.childContentfulRichText.html.replace('\n', '') }} />
+
+        {project.website &&
+        <p className='project-website'>
+          <a
+            href={project.website[1]}
+            target='_blank'
+            rel='noopener noreferrer'>
+            {project.website[0]}
+          </a>
+        </p>
+        }
 
       </div>
     )
@@ -52,8 +48,10 @@ const Archiv = (props) => (
               title
               order
               path
-              description {
-                description
+              description2 {
+                childContentfulRichText {
+                  html
+                }
               }
               website
             }

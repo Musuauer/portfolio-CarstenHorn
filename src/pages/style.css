@@ -204,6 +204,10 @@ main{
     margin-bottom: 1rem;
     font-size: 1rem;
 }
+.project-website{
+    margin-top: -3rem;
+    margin-bottom: 4rem;
+}
 
 /* --- HOME --- */
 .home-images{
