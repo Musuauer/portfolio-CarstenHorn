@@ -51,7 +51,7 @@ const Impressum = (props) => (
 
             <div className='credit'>
               <p>
-                Design und entwicklung: <a
+                Design und Entwicklung: <a
                   href='https://www.juliamarquardt.de/'
                   target='_blank'
                   rel='noopener noreferrer'
