@@ -312,7 +312,7 @@ main{
         margin: 0;
     }
     .press{
-        margin-bottom: 4rem;
+        padding-bottom: 4rem;
     }
     .press h3{
         margin-top: 4rem;
@@ -351,7 +351,7 @@ main{
     .mobile-nav{
     display: none;
     }
-   
+
     .menu{
     display: flex;
     width: 25rem;

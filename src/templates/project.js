@@ -62,11 +62,9 @@ export const ProjectTemplate = (props) => {
 }
 
 const Project = ({ data }) => {
-  console.log('Data', data)
 
   const post = (data.allContentfulBook.edges[0]) ? data.allContentfulBook : data.allContentfulProject
 
-  console.log('ProjectData', post)
   return (
     <Layout>
 

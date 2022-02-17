@@ -14,7 +14,6 @@ class Header extends React.Component {
   }
 
   render () {
-    console.log('header mounted')
     return (
       <header>
 

@@ -13,18 +13,19 @@ module.exports = {
     '@contentful/gatsby-transformer-contentful-richtext',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
+    'gatsby-transformer-remark',
     'gatsby-plugin-sharp',
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: 'Carsten Horn',
-        short_name: 'Horn',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui'
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: 'Carsten Horn',
+    //     short_name: 'Horn',
+    //     start_url: '/',
+    //     background_color: '#663399',
+    //     theme_color: '#663399',
+    //     display: 'minimal-ui'
+    //   }
+    // },
     'gatsby-plugin-offline'
   ]
 }

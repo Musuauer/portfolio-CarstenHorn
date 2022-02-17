@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import { MarkdownProcessor } from '../components/Markdown/MarkdownProcessor'
 
 class Project extends Component {
   render () {
     const { project } = this.props
+
 
     return (
       <div
@@ -17,7 +19,18 @@ class Project extends Component {
           {project.title}
         </Link>
 
-        <div className='project-text' dangerouslySetInnerHTML={{ __html: project.description2.childContentfulRichText.html.replace('\n', '') }} />
+        <div className='project-text'
+        // dangerouslySetInnerHTML={{ __html: project.description2.childContentfulRichText.html.replace('\n', '') }}
+        >
+          {
+            project.description2.raw
+            ?   <MarkdownProcessor
+            markdownElement={ project.description2 }
+          />
+          : null
+          }
+
+          </div>
 
         {project.website &&
         <p className='project-website'>
@@ -48,12 +61,11 @@ const Archiv = (props) => (
               title
               order
               path
-              description2 {
-                childContentfulRichText {
-                  html
-                }
-              }
               website
+              description2 {
+                raw
+              }
+
             }
           }
         }

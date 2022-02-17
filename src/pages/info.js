@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import { MarkdownProcessor } from '../components/Markdown/MarkdownProcessor'
 
 const Info = (props) => (
   <StaticQuery
@@ -11,9 +12,7 @@ const Info = (props) => (
           edges{
             node{
               ausstellungen {
-                childContentfulRichText {
-                  html
-                }
+                raw
               }
               bio {
                 bio
@@ -50,7 +49,14 @@ const Info = (props) => (
             <div className='shows'>
               <h3>Ausstellungen</h3>
 
-              <div dangerouslySetInnerHTML={{ __html: data.allContentfulInfo.edges[0].node.ausstellungen.childContentfulRichText.html }} />
+              <div/>
+               {
+            data.allContentfulInfo.edges[0].node.ausstellungen.raw
+            ?   <MarkdownProcessor
+            markdownElement={ data.allContentfulInfo.edges[0].node.ausstellungen }
+          />
+          : null
+          }
 
             </div>
 

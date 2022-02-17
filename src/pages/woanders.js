@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import { MarkdownProcessor } from '../components/Markdown/MarkdownProcessor'
 import styled from 'styled-components'
 
 const ProjectIndex = styled.div`
@@ -46,10 +47,8 @@ const Archiv = (props) => (
               title
               order
               path
-              description2{
-                childContentfulRichText{
-                  html
-                }
+              description2 {
+                raw
               }
             }
           }
@@ -68,9 +67,17 @@ const Archiv = (props) => (
                 projectIndex={i}
               />
             ))}
-          { console.log('book data', data.allContentfulBook.edges[0].node)}
 
-          <div className='project-text' dangerouslySetInnerHTML={{ __html: data.allContentfulBook.edges[0].node.description2.childContentfulRichText.html.replace('\n', '<br/><br/>') }} />
+          <div className='project-text'
+          >
+                 {
+            data.allContentfulBook.edges[0].node.description2.raw
+            ?   <MarkdownProcessor
+            markdownElement={ data.allContentfulBook.edges[0].node.description2 }
+          />
+          : null
+          }
+            </div>
 
         </div>
       </Layout>
