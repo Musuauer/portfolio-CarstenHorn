@@ -283,7 +283,7 @@ main{
     .project-list{
         text-align: left;
         line-height: 2;
-        margin-bottom: 5rem;
+        padding-bottom: 5rem;
         margin-top: 2.8rem;
     }
     .info-container {
