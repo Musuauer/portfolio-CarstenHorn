@@ -2,6 +2,9 @@
   "name": "carsten-horn",
   "description": "Carsten Horn portfolio",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "author": "Guillermo Gudino <info@guillermogudino.com>",
   "dependencies": {
     "@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",
