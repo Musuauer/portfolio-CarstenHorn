@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import '../pages/style.css'
 
 export default class IndexPage extends React.Component {
@@ -11,9 +10,7 @@ export default class IndexPage extends React.Component {
   }
 
   componentDidMount () {
-    const images = this.props.data.allContentfulHomeImages.edges[0].node.homeImages.map(image =>
-      image.fluid
-    )
+    const images = this.props.data.allContentfulHomeImages.edges[0].node.homeImages
     this.setState(
       { images },
       () => this.shuffleNow()
@@ -55,12 +52,11 @@ export default class IndexPage extends React.Component {
          onClick={this.shuffleNow}
          className='home-images'
        >
-         <Img
-           fluid={this.state.randomImage}
-           imgStyle={{objectFit: 'contain'}}
+         <img
+           src={this.state.randomImage.publicUrl}
+           alt={this.state.randomImage.title || ''}
+           style={{objectFit: 'contain', width: '100%', height: '100%'}}
            className='images'
-           fadeIn={false}
-           backgroundColor={'white'}
          />
        </div>
 
@@ -75,12 +71,8 @@ export const query = graphql`
       edges{
         node{
           homeImages{
-            fluid{
-              src
-              aspectRatio
-              srcSet
-              sizes
-            }
+            publicUrl
+            title
           }
         }
       }

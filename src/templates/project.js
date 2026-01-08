@@ -1,45 +1,44 @@
 import React, { useState, useCallback } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Img from 'gatsby-image'
 import ArrowRight from '../Utils/ArrowRight'
 
-import { useTransition, animated } from 'react-spring/web.cjs'
-
 export const ProjectTemplate = (props) => {
-  const availableImages = props.images
+  const availableImages = props.images || []
 
   const [ index, set ] = useState(0)
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const nextRight = useCallback(() => {
-    set(state => (state + 1) % availableImages.length)
+    if (availableImages.length > 0) {
+      set(state => (state + 1) % availableImages.length)
+    }
   }, []
   )
 
-  const transitions = useTransition(index, p => p, {
-    from: { opacity: 0, position: 'absolute', top: 0, left: 0, right: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 }
-  })
+  const currentImage = availableImages[index]
+
+  if (!currentImage) {
+    return (
+      <div style={{ position: 'relative', height: '100%' }}>
+        <div className='home-images' style={{ position: 'relative', width: '100%', height: '100%' }}>
+          <p>No images available</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div style={{ position: 'relative', height: '100%' }}>
 
-      {transitions.map(({ item, props, key }) => {
-        const currentImage = availableImages[item]
-        return <animated.div
-          key={key} style={props}
-          className='home-images' onClick={() => nextRight()}>
-          <Img
-            fluid={currentImage.fluid}
-            imgStyle={{objectFit: 'contain'}}
-            className='images'
-            fadeIn={false}
-            // backgroundColor={'white'}
-          />
-        </animated.div>
-      })}
+      <div className='home-images' style={{ position: 'relative', width: '100%', height: '100%' }} onClick={() => nextRight()}>
+        <img
+          src={currentImage.publicUrl}
+          alt={currentImage.title || ''}
+          style={{objectFit: 'contain', width: '100%', height: '100%'}}
+          className='images'
+        />
+      </div>
 
       <div className='arrows'>
 
@@ -87,12 +86,10 @@ query projectQuery ($path: String!){
         title
         path
         images{
-          fluid{
-            src
-            aspectRatio
-            srcSet
-            sizes
-          }
+          publicUrl
+          title
+          width
+          height
         }
       }
     }
@@ -103,12 +100,10 @@ query projectQuery ($path: String!){
         title
         path
         images{
-          fluid{
-            src
-            aspectRatio
-            srcSet
-            sizes
-          }
+          publicUrl
+          title
+          width
+          height
         }
       }
     }

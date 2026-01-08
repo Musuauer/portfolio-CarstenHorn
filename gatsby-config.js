@@ -2,7 +2,13 @@ module.exports = {
   siteMetadata: {
     title: 'Carsten Horn'
   },
+  flags: {
+    FAST_DEV: true,
+    PRESERVE_WEBPACK_CACHE: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true
+  },
   plugins: [
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-source-contentful',
       options: {

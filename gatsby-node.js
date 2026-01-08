@@ -33,6 +33,7 @@ exports.createPages = ({graphql, actions}) => {
           createPage({
             path: edge.node.path,
             component: projectTemplate,
+            defer: true,
             context: {
               slug: edge.node.slug
             }
@@ -42,6 +43,7 @@ exports.createPages = ({graphql, actions}) => {
           createPage({
             path: edge.node.path,
             component: projectTemplate,
+            defer: true,
             context: {
               slug: edge.node.slug
             }

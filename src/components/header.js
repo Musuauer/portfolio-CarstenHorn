@@ -1,7 +1,6 @@
 import React from 'react'
 import Menubar from './Menubar'
 import { Link } from 'gatsby'
-import HamburgerMenu from 'react-hamburger-menu'
 
 class Header extends React.Component {
   state = {
@@ -31,18 +30,12 @@ class Header extends React.Component {
 
         <div className='mobile-nav'>
 
-          <div className='menu-btn' id='menu-btn'>
-            <HamburgerMenu
-              isOpen={this.state.open}
-              menuClicked={this.handleClick}
-              width={28}
-              height={15}
-              strokeWidth={1}
-              rotate={0}
-              color='black'
-              borderRadius={0}
-              animationDuration={0.5}
-            />
+          <div className='menu-btn' id='menu-btn' onClick={this.handleClick} style={{ cursor: 'pointer' }}>
+            <svg width={28} height={15} viewBox='0 0 28 15' style={{ display: 'block' }}>
+              <line x1='0' y1='0' x2='28' y2='0' stroke='black' strokeWidth='1' />
+              <line x1='0' y1='7' x2='28' y2='7' stroke='black' strokeWidth='1' />
+              <line x1='0' y1='14' x2='28' y2='14' stroke='black' strokeWidth='1' />
+            </svg>
           </div>
 
           {this.state.open === true &&
