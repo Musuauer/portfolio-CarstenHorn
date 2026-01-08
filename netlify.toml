@@ -5,6 +5,10 @@ publish = "public"
 [build.environment]
 NODE_VERSION = "22"
 
-# Exclude the problematic adapters directory from Netlify caching
-[build.cache]
-ignorePatterns = [".cache/adapters/**"]
+# Include .cache/adapters in function bundles since SSR engine needs it
+[functions]
+included_files = [
+  ".cache/adapters/**",
+  ".cache/adapters/**/node_modules/**",
+  ".cache/functions/**"
+]
