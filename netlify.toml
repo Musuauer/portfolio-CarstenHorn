@@ -4,7 +4,3 @@ publish = "public"
 
 [build.environment]
 NODE_VERSION = "22"
-
-# Netlify Gatsby plugin - no inputs supported, just declare it
-[[plugins]]
-package = "@netlify/plugin-gatsby"
