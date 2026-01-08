@@ -5,10 +5,18 @@ publish = "public"
 [build.environment]
 NODE_VERSION = "22"
 
-# Include .cache/adapters in function bundles since SSR engine needs it
-[functions]
+# Configure Gatsby plugin to include necessary cache files for SSR functions
+[[plugins]]
+package = "@netlify/plugin-gatsby"
+[plugins.inputs]
 included_files = [
-  ".cache/adapters/**",
-  ".cache/adapters/**/node_modules/**",
-  ".cache/functions/**"
+  ".cache/**",
+  "public/**"
+]
+
+[plugins.inputs.__ssr]
+external_node_modules = ["msgpackr-extract"]
+included_files = [
+  "public/404.html",
+  "public/500.html"
 ]
