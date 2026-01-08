@@ -5,18 +5,6 @@ publish = "public"
 [build.environment]
 NODE_VERSION = "22"
 
-# Skip the @netlify/plugin-gatsby since we handle the build directly
-[[plugins]]
-package = "@netlify/plugin-gatsby"
-inputs = { skipCachingPaths = [".cache/adapters"] }
-
-# Cache configuration for faster builds
+# Exclude the problematic adapters directory from Netlify caching
 [build.cache]
-patterns = [
-  ".cache/**",
-  "node_modules/**",
-  "public/**"
-]
-ignorePatterns = [
-  ".cache/adapters/**"
-]
+ignorePatterns = [".cache/adapters/**"]
